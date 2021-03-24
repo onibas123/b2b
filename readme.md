@@ -8,7 +8,8 @@
 - MariaDB: 10.4.17
 - jQuery v3.2.1
 - Bootstrap v4.1.1
-
+- Script charts "https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"
+- Fusion theme "https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"
 ## Usabilidad
 	- Clona o descarga el proyecto de este repositorio y muevelo hacia tu directorio del servidor web.
     - El nombre de la carpeta es b2b y esta contiene todo los archivos necesarios acorde al test descrito.
