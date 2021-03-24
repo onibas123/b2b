@@ -17,6 +17,9 @@
     - Una vez realizado los pasos anteriores, ve a tu browser y en la barra de direcciones digita "http://localhost/b2b".
     - La interfaz de usuario muestra un nav con 2 opciones que son Ejercicio 1 y 2.
     - Se realizo el extra, considerar que en el extra las operaciones que estan relacionadas con los locales se demoran entre 3 a 5 segundos en el display de la data, por el cruce de información y la estructuración de los datos.
+## A considerar
+    - A futuro para no estar editando el archivo /config/Database.php, se debiese considerar un archivo ".env".
+    - Con la finalidad de tener una mayor abstracción y protección de las clases y del codigo fuente y de esta manera, configurar variables de entorno como api_key, db_access, etc.
 
 
 
