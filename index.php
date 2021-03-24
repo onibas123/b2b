@@ -7,7 +7,7 @@
     <style>
         table
         {
-           text-size: 11px; 
+           font-size: 11px; 
         }
         .table .thead-light th {
             color: #FFF;
@@ -109,23 +109,8 @@
     <script type="text/javascript">
 
     $(document).ready(function() {
-        load_init();
+        load_table();
     });
-
-    function load_init()
-    {
-        $.ajax({
-            url: 'middleware/B2b.php',
-            type: 'post',
-            data: {action: 'get_sales'},
-            dataType: 'json',
-            success: function(response)
-            {   
-                $('#tbody-task-1').html(response['tbody']);
-                $('#tfoot-task-1').html(response['tfoot']);
-            }
-        });
-    }
 
     function load_table()
     {
