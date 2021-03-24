@@ -15,10 +15,8 @@
     - Los parámetros de conectividad hacia la base de datos se encuentran en /config/Database.php.
     - Posteriormente restaura la base de datos mediante el script "b2b.sql" que se encuentra en la raíz del proyecto.
     - Una vez realizado los pasos anteriores, ve a tu browser y en la barra de direcciones digita "http://localhost/b2b".
+    - La interfaz de usuario muestra un nav con 2 opciones que son Ejercicio 1 y 2, y se realizo el extra, considerar que en el extra las operaciones que estan relacionadas con los locales se demoran entre 3 a 5 segundos en el display de la data, por el cruce de información y la estructuración de los datos.
 
-## Pendiente:
-    - Queda pendiente el ejercicio 2. 
-    - Ya esta integrada la librería de los gráficos, solo falta parsear los datos pertinentes para obtener la salida deseada.
 
 
 	
