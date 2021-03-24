@@ -13,20 +13,6 @@
       type="text/javascript"
       src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"
     ></script>
-
-    <style>
-        table
-        {
-           text-size: 11px; 
-        }
-        .table .thead-light th {
-            color: #FFF;
-        }
-        .td-product{
-            color: #FFF;
-            background-color: #c6c8ca;
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
