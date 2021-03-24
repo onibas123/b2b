@@ -88,59 +88,48 @@
         dataType: 'json',
         success: function(response)
         {  
-          for(let i=0; i<response['cadenas'].length; i++)
+          for(var i=0; i< response['cadenas'].length; i++)
           {
-            if(cadenas.includes(response['cadenas'][i]) == false)
-            {
-              if(i > 0)
+            if(cadenas.includes(response['cadenas'][i]) == false){
+              if(i > 0 )
               {
-                dataset_.push({
+                dataset_.push(
+                {
                   seriesname: cadenas[0],
-                  data: [
-                    {
-                      value: sales,
-                    },
-                  ],
-                });
-
+                  data: sales
+                }
+              );
 
                 cadenas = [];
-                sales = [];
+                sales = '';
               }
-
               cadenas.push(response['cadenas'][i]);
-              sales.push(response['sales'][i]);
+              sales.push({ value: response['sales'][i] });
             }
-            else
-            {
-              sales.push(response['sales'][i]);
-
-              if(i == response['cadenas'].length - 1)
+            else{
+              
+              sales.push({ value: response['sales'][i] });
+              if(i == response['cadenas'].length - 1 )
               {
-                dataset_.push({
+                dataset_.push(
+                {
                   seriesname: cadenas[0],
-                  data: [
-                    {
-                      value: sales,
-                    },
-                  ],
-                });
-
-                cadenas = [];
-                sales = [];
+                  data: sales
+                }
+              );
               }
             }
           }
-          
+
           //->
           const dataSource = {
           chart: {
             caption: "Venta diaria por Cadenas.",
             subcaption: " Intervalo [07/01/2019 - 13/01/2019]",
-            numbersuffix: " $",
+            numbersuffix: "",
             showsum: "1",
             plottooltext:
-              "$label Vende <b>$dataValue</b> La Cadena $seriesName",
+              "El día $label La Cadena $seriesName Vende $ <b>$dataValue</b> ",
             theme: "fusion",
             drawcrossline: "1",
           },
@@ -171,129 +160,8 @@
               ],
             },
           ],
-          dataset: dataset_,
-          };
-          /*
-          [
-            {
-              seriesname: "Coal",
-              data: 
-              [
-                {
-                  value: "400",
-                },
-                {
-                  value: "830",
-                },
-                {
-                  value: "500",
-                },
-                {
-                  value: "420",
-                },
-                {
-                  value: "790",
-                },
-                {
-                  value: "380",
-                },
-              ],
-            },
-            {
-              seriesname: "Hydro",
-              data: [
-                {
-                  value: "350",
-                },
-                {
-                  value: "620",
-                },
-                {
-                  value: "410",
-                },
-                {
-                  value: "370",
-                },
-                {
-                  value: "720",
-                },
-                {
-                  value: "310",
-                },
-              ],
-            },
-            {
-              seriesname: "Nuclear",
-              data: [
-                {
-                  value: "210",
-                },
-                {
-                  value: "400",
-                },
-                {
-                  value: "450",
-                },
-                {
-                  value: "180",
-                },
-                {
-                  value: "570",
-                },
-                {
-                  value: "270",
-                },
-              ],
-            },
-            {
-              seriesname: "Gas",
-              data: [
-                {
-                  value: "180",
-                },
-                {
-                  value: "330",
-                },
-                {
-                  value: "230",
-                },
-                {
-                  value: "160",
-                },
-                {
-                  value: "440",
-                },
-                {
-                  value: "350",
-                },
-              ],
-            },
-            {
-              seriesname: "Oil",
-              data: [
-                {
-                  value: "60",
-                },
-                {
-                  value: "200",
-                },
-                {
-                  value: "200",
-                },
-                {
-                  value: "50",
-                },
-                {
-                  value: "230",
-                },
-                {
-                  value: "150",
-                },
-              ],
-            },
-          ],
-          
-        };*/
+          dataset: dataset_ , 
+        };
 
         FusionCharts.ready(function () {
           var myChart = new FusionCharts({
@@ -307,7 +175,9 @@
         });
           //<-
         }
+
       });
+
     });
 
    
