@@ -20,6 +20,9 @@
 ## A considerar
     - A futuro para no estar editando el archivo /config/Database.php, se debiese considerar un archivo ".env".
     - Con la finalidad de tener una mayor abstracción y protección de las clases y del código fuente y de esta manera, configurar variables de entorno como api_key, db_access, etc.
+    - En cuanto al rendimiento que mencioné en el punto anterior, se puede mejorar y optimizar bastante si se utilizará MySQL sin INNODB, ya que este engine hace validaciones y en base a relaciones y estas relaciones producen que la performance del sistema en algunos caso se demore un poco más.
+    - MyISAM por otro lado, perdemos la relación entre tablas pero ganamos un gran rendimiento y velocidad de carga, dejando del lado de la programación las validaciones y relaciones necesarias.
+    - El script y las tablas estan con innoDB y relacionadas entre sí con el fin de respetar la consigna dada en base a las relaciones de b2b, locales y productos.
 
 
 
