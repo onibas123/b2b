@@ -136,7 +136,7 @@
           const dataSource = {
           chart: {
             caption: "Venta diaria por Cadenas.",
-            subcaption: " Intervalo [07/01/2019 - 13/01/2010]",
+            subcaption: " Intervalo [07/01/2019 - 13/01/2019]",
             numbersuffix: " $",
             showsum: "1",
             plottooltext:
