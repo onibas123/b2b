@@ -1,0 +1,5 @@
+//TRUNCATE TABLE data_b2b
+//SELECT * FROM data_b2b
+//DELETE FROM data_b2b WHERE ID = 0
+//SELECT ID, DATE_FORMAT(STR_TO_DATE(FECHA, '%m/%d/%Y'), '%Y-%m-%d') FROM data_b2b; 
+//UPDATE data_b2b SET FECHA = DATE_FORMAT(STR_TO_DATE(FECHA, '%m/%d/%Y'), '%Y-%m-%d')
